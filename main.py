@@ -1,4 +1,4 @@
-from stats import count_words
+from stats import count_words, count_letters
 
 def get_book_text(path_to_file: str) -> str:
     with open(path_to_file, "r") as f:
@@ -10,6 +10,10 @@ def main():
 
     text = get_book_text(path_to_file)
     wordcount = count_words(text)
+    lettercount = count_letters(text)
     print(f"Found {wordcount} total words")
+    print("Found the following letter counts:")
+    for letter, count in lettercount.items():
+        print(f"  {letter}: {count}")
 
 main()
