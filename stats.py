@@ -26,7 +26,7 @@ def count_letters(text: str) -> dict:
         if char.isalpha():
             char_lower = char.lower()
             letter_counts[char_lower] = letter_counts.get(char_lower, 0) + 1
-    return letter_counts(char_lower, letter_counts[char_lower])
+    return letter_counts
 
 def sort_letter_counts(letter_counts: dict) -> list:
     """
