@@ -14,6 +14,6 @@ def main():
     print(f"Found {wordcount} total words")
     print("Found the following letter counts:")
     for letter, count in lettercount.items():
-        print(f"  {letter}: {count}")
+        print(f" '{letter}': {count}")
 
 main()
