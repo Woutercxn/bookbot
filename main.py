@@ -21,6 +21,6 @@ def main():
 
     text = get_book_text(path_to_file)
     wordcount = count_words(text)
-    print(f"Word count: {wordcount}")
+    print(f"Found {wordcount} total words")
 
 main()
