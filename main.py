@@ -12,13 +12,13 @@ def main():
     wordcount = count_words(text)
     lettercount = count_letters(text)
     print(f"Found {wordcount} total words")
-    print("Found the following letter counts:")
-    for letter, count in lettercount.items():
-        print(f" '{letter}': {count}")
+    # print("Found the following letter counts:")
+    # for letter, count in lettercount.items():
+    #    print(f" '{letter}': {count}")
         
     sorted_letters = sort_letter_counts(lettercount)
     print("Letters sorted by frequency:")
     for letter, count in sorted_letters:
-        print(f" '{letter}': {count}")
+        print(f" {letter}: {count}")
 
 main()
