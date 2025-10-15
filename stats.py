@@ -26,4 +26,16 @@ def count_letters(text: str) -> dict:
         if char.isalpha():
             char_lower = char.lower()
             letter_counts[char_lower] = letter_counts.get(char_lower, 0) + 1
-    return letter_counts
+    return letter_counts(char_lower, letter_counts[char_lower])
+
+def sort_letter_counts(letter_counts: dict) -> list:
+    """
+    Sort the letter counts dictionary by count.
+
+    Args:
+        letter_counts (dict): A dictionary with letters as keys and their counts as values
+
+    Returns:
+        list: A sorted list of tuples (letter, count)
+    """
+    return sorted(letter_counts.items(), key=lambda item: item[1], reverse=True)
